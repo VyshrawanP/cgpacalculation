@@ -1,0 +1,142 @@
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/images/3.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.title {
+    color: rgb(228, 0, 0);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+
+.subject {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(197, 99, 99, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+}
+
+
+.inner {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+input {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: rgb(195, 195, 195);
+    border: none;
+}
+
+select {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: rgb(195, 195, 195);
+    border: none;
+}
+
+
+.b1 {
+    background-color: rgb(228, 0, 0);
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+.b12{
+    background-color: rgb(228, 0, 0);
+    font-size: 14px;
+    padding: 10px;
+    width: 40;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+
+}
+
+.b1:hover {
+    background-color: rgb(180, 0, 0);
+}
+.ANGRY1{
+    color: rgb(244, 0, 0);
+    font-size: 0.9em;
+    margin: 0.5em 0;
+    font-weight: bold;
+    padding-left: 43vw;
+}
+
+  </style>
+</head>
+<title>VIT-CGPA CALCULATOR</title>
+<body bgcolor="hsl(0, 14%, 11%)">
+
+    <h1 class="title">VIT CGPA CALCULATOR</h1>
+    <h6 class="ANGRY1"><u>Cumulative GPA Calculator</u></h6>
+    <form action="/calculates" method="post">
+    <div id="subjectsContainer">
+      <div class="subject">
+        <div class="inner">
+      
+ <input class="q1" type="number" step="0.01"name="gpa" placeholder="CGPA till last sem" min="1" max="10"   />
+
+ <input class="q1" type="number" name="credit" placeholder="Credit till last sem" min="1"  />
+        </div>
+      <div class="inner">
+              
+ <input class="q1" type="number" name="gpa" step="0.01" placeholder="GPA this sem" min="1" max="10"  />
+
+ <input  class="q1"type="number" name="credit" placeholder="Credit this sem" min="1"  />
+
+
+
+  
+
+        </div>
+
+          <h2>Your CGPA is: <span th:text="${cgpa}"></span></h2>
+          <button class="b1" type="submit">Calculate CGPA</button></form>
+          <a href="/" class="b12">Home</a>
+      </div>
+
+      
+    </div>
+    
+    
+
+
+</body>
+</html>

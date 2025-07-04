@@ -1,0 +1,207 @@
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+
+    background: url('/images/3.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.title {
+    color: rgb(228, 0, 0);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+/* Subject Box */
+.subject {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(197, 99, 99, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Input fields */
+input {
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: rgb(195, 195, 195);
+    border: none;
+}
+
+select {
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: rgb(195, 195, 195);
+    border: none;
+}
+
+/* Buttons */
+.b1 {
+    background-color: rgb(228, 0, 0);
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.b1:hover {
+    background-color: rgb(180, 0, 0);
+}
+
+
+.ANGRY {
+    color: white;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+.ANGRY1{
+    color: rgb(244, 0, 0);
+    font-size: 0.9em;
+    margin: 0.5em 0;
+    font-weight: bold;
+    padding-left: 43vw;
+}
+.b12{
+    background-color: rgb(228, 0, 0);
+    font-size: 14px;
+    padding: 10px;
+    width: 40;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+
+}
+
+</style>
+</head>
+<title>VIT-CGPA CALCULATOR</title>
+<body bgcolor="hsl(0, 14%, 11%)">
+
+    
+    <h1 class="title">VIT CGPA CALCULATOR</h1>
+    <h6 class="ANGRY1"><u>Sem-wise GPA Calculator</u></h6>
+    <form action="/semcalculates" method="post">
+    <div id="subjectsContainer">
+      <div class="subject">
+        <div class="inner">
+      <h6 class="ANGRY">GPA in 1st sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1" max="10" />
+
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+            <h6 class="ANGRY">GPA in 1st sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1" max="10" />
+
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+            <h6 class="ANGRY">GPA in 2nd sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1" max="10" />
+
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+            <h6 class="ANGRY">GPA in 3rd sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1" max="10" />
+
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+            <h6 class="ANGRY">GPA in 5th sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1" max="10" />
+
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+            <h6 class="ANGRY">GPA in 6th sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1" max="10" />
+
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+            <h6 class="ANGRY">GPA in 7th sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1"  max="10"/>
+
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+
+            <h6 class="ANGRY">GPA in 8th sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1"  max="10"/>
+        </select>
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+
+            <h6 class="ANGRY">GPA in 9th sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1" max="10" />
+        </select>
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+            <h6 class="ANGRY">GPA in 10th sem</h6>
+ <input  type="number" name="gpa" step="0.01" placeholder="GPA" min="1" max="10" />
+        </select>
+ <input  type="number" name="credi" placeholder="CREDITS" min="1"  />
+        </div>
+      <div class="inner">
+
+
+
+  
+
+        </div>
+
+          <h2>Your current CGPA is: <span th:text="${cgpa}"></span></h2>
+          <button class="b1" type="submit">Calculate CGPA</button></form>
+          <a href="/" class="b12">Home</a>
+
+         
+      </div>
+
+      
+    </div>
+    
+    
+
+
+</body>
+</html>

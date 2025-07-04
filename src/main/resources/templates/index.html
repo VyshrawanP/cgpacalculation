@@ -2,67 +2,149 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .title{
-            color: rgb(0, 83, 228);
-            position: absolute;
-            left: 42%;
-        }
-        .image{
-            height: 100vh;
-            width:100vw;
-            object-fit: cover;
-        }
-        .inner{
-            padding-bottom: 5px;
-            
-     
-        }
-        .b1{
-            background-color:rgb(62, 62, 247);
-                font-size: 14px;   
-                 padding: 10px;      
-                 width: 400px;       
-                border-radius: 8px; 
-                margin-bottom: 2px; 
-        }
-
-        .subject{
-            position:absolute;
-            top: 15vh;
-            left:40vw;
-            display : flex;
-            flex-direction:column;
-            background-color: rgba(240, 248, 255, 0.424);
-            padding: 25px;
-            border-radius: 15px;
-
-        }
-    input {
-    font-size: 14px;   
-    padding: 10px;      
-    width: 200px;       
-    border-radius: 8px; 
-    margin-bottom: 2px; 
+.title {
+    color: rgb(228, 0, 0);
+    position: relative;  
+    text-align: center;  
+    margin-top: 10px;
+    font-size: 1.8rem;
 }
 
-    select {
-    font-size: 14px;   
-    padding: 10px;      
-    width: 200px;       
-    border-radius: 8px; 
-    margin-bottom: 2px; 
+.image {
+    width: 100vw;
+    height: auto;         
+    max-height: 50vh;     
+    object-fit: cover;
 }
-    </style>
+
+.inner {
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;     
+    gap: 10px;
+}
+
+.b1 {
+    background-color: rgb(228, 0, 0);
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;          
+    max-width: 400px;    
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.b2 {
+    background-color: rgb(228, 0, 0);
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.subject {
+    position: relative;   
+    top: auto;
+    left: auto;
+    margin: 20px auto;   
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(197, 99, 99, 0.424);
+    padding: 30px 20px 75px 20px;
+    border-radius: 15px;
+}
+
+.subjects {
+    position: relative;  
+    top: auto;
+    left: auto;
+    margin: 20px auto;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: rgba(197, 99, 99, 0.424);
+    border-radius: 15px;
+    padding: 15px;
+    justify-content: center;
+}
+
+input {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;        
+    max-width: 200px;   
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: rgb(195, 195, 195);
+    box-sizing: border-box;
+}
+
+
+.ANGRY1{
+    color: rgb(244, 0, 0);
+    margin: 0.5em 0;
+    font-weight: bold;
+    padding-left: 43vw;
+}
+
+select {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: rgb(195, 195, 195);
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 600px) {
+    .inner {
+        flex-direction: column; 
+    }
+    .b1, .b2 {
+        max-width: 100%;
+    }
+    .subject, .subjects {
+        max-width: 95vw;
+        padding: 20px 10px 50px 10px;
+    }
+}
+body {
+    background: url('/images/3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+</style>
 </head>
-<title>VIT CGPA CALCULATOR</title>
-<body bgcolor="white">
+<title>VIT-CGPA CALCULATOR</title>
+<body bgcolor="hsl(0, 14%, 11%)">
 
-    <h1 class="title">VIT CGPA CALCULATOR</h1>
+    <h1 class="title"><u>VIT-CGPA CALCULATOR</u></h1>
+   
+   
+ <h3 class="ANGRY1"><u>Cumulative GPA Calculator</u></h6>
     <form action="/calculate" method="post">
     <div id="subjectsContainer">
       <div class="subject">
+
         <div class="inner">
         <select name="grade">
+          
         <option value="" disabled selected>Select grade</option>
           <option value="S">S</option>
           <option value="A">A</option>
@@ -201,14 +283,20 @@
         </select>
 <input type="number" name="credits" placeholder="Credits" min="1" />
         </div>
-          <button class="b1" type="submit">Calculate CGPA</button>
 
+          <h2>Your CGPA is: <span th:text="${cgpa}"></span></h2>
+          <button class="b1" type="submit">Calculate GPA</button></form>
+          
       </div>
 
       
     </div>
+    <div class="subjects">
+    <a href="/calculates"><button class="b2">Calculate CGPA</button></a>
+    <a href="/semcalculates"><button class="b2">Any sem CGPA calculator</button></a>
+    </div>
     
-<img class="image" src="/images/2.jpg">
+
 
 </body>
 </html>
