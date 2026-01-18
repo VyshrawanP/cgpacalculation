@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIT CGPA Calculator</title>
+
+<style>
+:root {
+    --primary: #b00020;
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --border: #dcdcdc;
+    --text: #222;
+    --muted: #666;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    background-color: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 16px;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    text-align: center;
+    margin-top: 0;
+    color: var(--primary);
+}
+
+/* ---------- SUBJECT ROW ---------- */
+.inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+select, input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    background: #fafafa;
+}
+
+/* ---------- BUTTONS ---------- */
+.b1 {
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.b2 {
+    padding: 12px 18px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ---------- RESULT ---------- */
+.result {
+    margin-top: 18px;
+    padding: 12px;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ---------- NAV BUTTONS ---------- */
+.subjects {
+    margin-top: 22px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 600px) {
+    .inner {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">VIT CGPA Calculator</div>
+
+<div class="container">
+    <div class="card">
+
+        <h3>Cumulative GPA Calculator</h3>
+
+        <!-- 🔒 LOGIC UNTOUCHED -->
+        <form action="/calculate" method="post">
+
+            <!-- SAME NUMBER OF SUBJECT ROWS -->
+            <!-- SAME NAMES -->
+
+            <div class="inner">
+                <select name="grade">
+                    <option disabled selected>Select grade</option>
+                    <option>S</option><option>A</option><option>B</option>
+                    <option>C</option><option>D</option><option>E</option>
+                    <option>F</option><option>N</option>
+                </select>
+                <input type="number" name="credits" placeholder="Credits" min="1">
+            </div>
+
+            <!-- repeat rows (unchanged logic) -->
+            <!-- keep exactly as backend expects -->
+
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+            <div class="inner"><select name="grade"><option disabled selected>Select grade</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>N</option></select><input type="number" name="credits" placeholder="Credits" min="1"></div>
+
+            <button class="b1" type="submit">Calculate GPA</button>
+
+            <div class="result">
+                Your CGPA is: <span th:text="${cgpa}"></span>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="subjects">
+        <a href="/calculates"><button class="b2">Calculate CGPA</button></a>
+        <a href="/semcalculates"><button class="b2">Any sem CGPA calculator</button></a>
+    </div>
+</div>
+
+<footer>
+    Developed by <strong>Vyshrawan P</strong>
+</footer>
+
+</body>
+</html>
