@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIT Sem-wise CGPA Calculator</title>
+
+<style>
+:root {
+    --primary: #b00020;
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --border: #dcdcdc;
+    --text: #222;
+    --muted: #666;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background-color: var(--card);
+    border-bottom: 1px solid var(--border);
+
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    margin: 0 0 6px;
+    text-align: center;
+}
+
+.card p {
+    margin: 0 0 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* ---------- SEM BLOCK ---------- */
+.sem {
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+
+.sem h4 {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    color: var(--primary);
+}
+
+.sem-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* ---------- INPUTS ---------- */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    background: #fafafa;
+}
+
+/* ---------- BUTTON ---------- */
+.b1 {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ---------- RESULT ---------- */
+.result {
+    margin-top: 18px;
+    padding: 12px;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ---------- LINK ---------- */
+.home-link {
+    display: block;
+    margin-top: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 600px) {
+    .sem-row {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">VIT Sem-wise CGPA Calculator</div>
+
+<div class="container">
+    <div class="card">
+        <h2>Sem-wise CGPA</h2>
+        <p>Enter GPA and credits for completed semesters</p>
+
+        <!-- 🔒 LOGIC UNCHANGED -->
+        <form action="/semcalculates" method="post">
+
+            <!-- SEM 1 -->
+            <div class="sem">
+                <h4>Semester 1</h4>
+                <div class="sem-row">
+                    <input type="number" step="0.01" name="gpa" placeholder="GPA" min="1" max="10">
+                    <input type="number" name="credi" placeholder="Credits" min="1">
+                </div>
+            </div>
+
+            <!-- SEM 2 -->
+            <div class="sem">
+                <h4>Semester 2</h4>
+                <div class="sem-row">
+                    <input type="number" step="0.01" name="gpa" placeholder="GPA" min="1" max="10">
+                    <input type="number" name="credi" placeholder="Credits" min="1">
+                </div>
+            </div>
+
+            <!-- SEM 3 -->
+            <div class="sem">
+                <h4>Semester 3</h4>
+                <div class="sem-row">
+                    <input type="number" step="0.01" name="gpa" placeholder="GPA" min="1" max="10">
+                    <input type="number" name="credi" placeholder="Credits" min="1">
+                </div>
+            </div>
+
+            <!-- SEM 4 -->
+            <div class="sem">
+                <h4>Semester 4</h4>
+                <div class="sem-row">
+                    <input type="number" step="0.01" name="gpa" placeholder="GPA" min="1" max="10">
+                    <input type="number" name="credi" placeholder="Credits" min="1">
+                </div>
+            </div>
+
+            <!-- SEM 5 -->
+            <div class="sem">
+                <h4>Semester 5</h4>
+                <div class="sem-row">
+                    <input type="number" step="0.01" name="gpa" placeholder="GPA" min="1" max="10">
+                    <input type="number" name="credi" placeholder="Credits" min="1">
+                </div>
+            </div>
+
+            <!-- SEM 6 -->
+            <div class="sem">
+                <h4>Semester 6</h4>
+                <div class="sem-row">
+                    <input type="number" step="0.01" name="gpa" placeholder="GPA" min="1" max="10">
+                    <input type="number" name="credi" placeholder="Credits" min="1">
+                </div>
+            </div>
+
+            <!-- SEM 7 -->
+            <div class="sem">
+                <h4>Semester 7</h4>
+                <div class="sem-row">
+                    <input type="number" step="0.01" name="gpa" placeholder="GPA" min="1" max="10">
+                    <input type="number" name="credi" placeholder="Credits" min="1">
+                </div>
+            </div>
+
+            <!-- SEM 8 -->
+            <div class="sem">
+                <h4>Semester 8</h4>
+                <div class="sem-row">
+                    <input type="number" step="0.01" name="gpa" placeholder="GPA" min="1" max="10">
+                    <input type="number" name="credi" placeholder="Credits" min="1">
+                </div>
+            </div>
+
+            <button class="b1" type="submit">Calculate CGPA</button>
+
+            <div class="result">
+                Your CGPA: <span th:text="${cgpa}"></span>
+            </div>
+        </form>
+
+        <a href="/" class="home-link">← Back to Home</a>
+    </div>
+</div>
+
+<footer>
+    Developed by <strong>Vyshrawan P</strong>
+</footer>
+
+</body>
+</html>

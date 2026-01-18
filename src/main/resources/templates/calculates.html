@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIT CGPA Calculator</title>
+
+<style>
+:root {
+    --primary: #b00020;
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --border: #dcdcdc;
+    --text: #222;
+    --muted: #666;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background-color: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    margin: 0 0 6px;
+    text-align: center;
+}
+
+.card p {
+    margin: 0 0 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* ---------- INPUT GROUP ---------- */
+.field {
+    margin-bottom: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    background: #fafafa;
+}
+
+/* ---------- BUTTON ---------- */
+.b1 {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ---------- RESULT ---------- */
+.result {
+    margin-top: 18px;
+    padding: 12px;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ---------- HOME LINK ---------- */
+.home-link {
+    display: block;
+    margin-top: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 13px;
+    color: var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">VIT CGPA Calculator</div>
+
+<!-- MAIN -->
+<div class="container">
+    <div class="card">
+
+        <h2>Cumulative CGPA</h2>
+        <p>Calculate updated CGPA after current semester</p>
+
+        <!-- 🔒 YOUR LOGIC: UNCHANGED -->
+        <form action="/calculates" method="post">
+
+            <div class="field">
+                <input type="number" step="0.01" name="gpa"
+                       placeholder="CGPA till last semester"
+                       min="1" max="10">
+            </div>
+
+            <div class="field">
+                <input type="number" name="credit"
+                       placeholder="Credits till last semester"
+                       min="1">
+            </div>
+
+            <div class="field">
+                <input type="number" step="0.01" name="gpa"
+                       placeholder="GPA of this semester"
+                       min="1" max="10">
+            </div>
+
+            <div class="field">
+                <input type="number" name="credit"
+                       placeholder="Credits of this semester"
+                       min="1">
+            </div>
+
+            <button class="b1" type="submit">Calculate CGPA</button>
+
+            <div class="result">
+                Your CGPA: <span th:text="${cgpa}"></span>
+            </div>
+
+        </form>
+
+        <a href="/" class="home-link">← Back to Home</a>
+    </div>
+</div>
+
+<footer>
+    Developed by <strong>Vyshrawan P</strong>
+</footer>
+
+</body>
+</html>
